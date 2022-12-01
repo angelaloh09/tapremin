@@ -55,9 +55,12 @@ We then initialized the first channel on the PIT with some hard coded load value
 For the LED Matrix, we created a write function that took in two parameters: a command parameter and a data parameter. In the command parameter, we tested different values after reading the datasheet for the matrix, and discovered that we could index into the rows of the LED matrix. For the data parameter, we also read the datasheet and tested different hex values that we could write to the data register of the matrix. Initially, some really weird patterns showed up on the matrix that we were not able to decipher towards the start. However, after several iterations of testing different command and data parameter values we discovered a pattern to how to control the LED.
 
 LED Matrix Bug: 
-<img src="https://user-images.githubusercontent.com/44074422/205134176-808302a6-40bd-4ffb-b020-cc3493de2c1d.png](https://user-images.githubusercontent.com/44074422/205135038-b8a5c604-4db2-4d3f-9847-cc52ab85e61c.jpg)" width="500" height="300" />
+
+<img src="https://user-images.githubusercontent.com/44074422/205135603-0dee1693-07ea-4a77-88e9-f1ea876642f4.jpg" width="500" height="300" />
+
 
 LED Matrix Working: 
+
 <img src="https://user-images.githubusercontent.com/44074422/205134952-04f09504-0e5f-49f8-859e-cae6526745fd.jpg" width="500" height="300" />
 
 Testing if our function was working properly was pretty straight forward for the matrix. Since we had the hardware component, our testing procedure involved writing to the LED matrix and observing if the pattern we wanted to appear on the matrix was the correct one that was showing up.
